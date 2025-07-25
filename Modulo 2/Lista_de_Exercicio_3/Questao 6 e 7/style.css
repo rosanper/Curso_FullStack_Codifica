@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+}
+
+h1 {
+    padding: 10px;
+    font-size: 35px;
+}
+
+h2 {
+    padding: 10px;
+    font-size: 25px;
+}
+
+p {
+    width: 80%;
+    padding: 10px 0;
+}
+
+.imgCard {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    padding-top: 5px;
+}
+
+#imgPrincipal {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-between;
+    background-color:  #3E5F44;
+}
+
+header h3 {
+    padding-left: 20px;
+    padding-top: 30px;
+    color: #E8FFD7;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.icone-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+
+.barra {
+    background-color: #E8FFD7;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    padding-inline-start: 0;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-bottom: 5px;
+}
+
+#menu li {
+    list-style-type: none;
+    padding-bottom: 5px;
+}
+
+#menu li a{
+    text-decoration: none;
+    color: #E8FFD7;
+}
+
+#menu li:hover {
+    transform: scale(1.07);
+}
+
+main {
+    background-color: #E8FFD7;;
+}
+
+.colContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.colContainer h2 {
+    text-decoration: underline;
+    padding-top: 25px;
+}
+
+.colContainer p {
+    text-align: center;
+}
+
+.colContainer ul {
+    padding: 10px 0;
+}
+
+.colContainer li {
+    text-align: center;
+    list-style-type: none;
+    padding: 5px;
+}
+
+.rowContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.destaque {
+    font-style: italic;
+    background-color: #c0f7c2;
+    width: 350px;
+    height: 250px;
+    margin: 30px auto;
+    border-radius: 10px;
+    border: 1px solid #93DA97;
+    align-content: center;
+    text-align: center;
+}
+
+.destaque p {
+    width: 100%;
+}
+
+.destaque:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.07);
+}
+
+.cards {
+    width:90%;
+    border: 1px solid #3E5F44;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+    background-color: #93DA97;
+}
+
+.card {
+    border: 1px solid #3E5F44;
+    border-radius: 10px;
+    background-color: #c0f7c2;
+    height: 250px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%) scale(2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+}
+
+figcaption {
+    padding: 5px;
+    text-align: center;
+}
+
+footer {
+    min-height: 100px;
+    background-color:  #3E5F44;
+}
+
+@media (max-width: 760px) {
+    #imgPrincipal {
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        padding: 20px 0;
+    }
+    
+    header {
+        height: auto;
+    }
+
+    header h3{
+        margin-bottom: 15px;
+    }
+
+    .icone-menu {
+        display: flex;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #3E5F44;
+    }
+
+    #menu-toggle:checked ~ nav #menu {
+        display: flex;
+    }
+    
+    #menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #menu li {
+        border-bottom: 2px solid  #E8FFD7;
+        padding-top: 5px;
+    }
+
+    #menu li a{
+        text-decoration: none;
+        color: #E8FFD7;
+    }
+
+    #menu li:hover {
+        transform: scale(1.07);
+    }
+
+    .rowContainer {
+        flex-direction: column;
+    }
+
+    .cards {
+        width:60%;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .card:hover {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+
+}

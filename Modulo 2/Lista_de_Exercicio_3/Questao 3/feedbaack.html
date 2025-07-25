@@ -1,0 +1,76 @@
+<!-- 3. Formulário de Feedback - Em arquivo feedback.html, construa um formulário
+que contenha:
+- Nome
+- E-mail
+- Endereço Completo
+- Tipo de feedback
+- Campo para o Feedback
+- Botão de Envio -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 3</title>
+</head>
+<body>
+    <header>
+        <h1>Formulário de Feedback</h1>
+    </header>
+    <main>
+        <form>
+            <div>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" name="nome">
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email">
+            </div>
+            <div>
+                <div>
+                    <label for="cep">CEP:</label>
+                    <input type="text" name="cep">
+                </div>
+                <div>
+                    <label for="logradouro">Logradouro:</label>
+                    <input type="text" name="logradouro">
+                </div>
+                <div>
+                    <label for="numero">Número:</label>
+                    <input type="text" name="numero">
+                </div>
+                <div>
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" name="complemento" placeholder="ex.: apto 101, Bloco A ...">
+                </div>
+                <div>
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" name="bairro">
+                </div>
+            </div>
+            
+            <div>
+                <label>Tipo de Feedback:</label>
+                <div>
+                    <label for="positivo">
+                        <input type="radio" name="tipoFeedback" value="positivo">Positivo
+                    </label>
+                    <label for="negativo">
+                        <input type="radio" name="tipoFeedback" value="negativo">Negativo
+                    </label>
+                    <label for="neutro">
+                        <input type="radio" name="tipoFeedback" value="neutro">Neutro
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label for="feedback">Feedback:</label>
+                <textarea name="feedback" placeholder="Escreva aqui seu Feedback" rows="4" cols="60" maxlength="600"></textarea>
+            </div>
+            <button type="submit">Enviar Feedback</button>
+        </form>
+    </main>
+</body>
+</html>
