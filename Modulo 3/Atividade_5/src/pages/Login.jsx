@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useUser } from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
+import { saveLocalStorage, getLocalStorage } from "../service/LocalStorageService"
+
 
 export default function Login() {
   const { user, login, logout } = useUser();
@@ -15,20 +17,50 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    login(username, password);
-    if (username === "admin" && password === "1234") {
-       navigate("/");
+
+    let storage = getLocalStorage({key: "users"})
+    const userStorageInfo = storage.find(user => user.username === username)
+  
+    if (userStorageInfo && username.toLowerCase() === userStorageInfo.username.toLowerCase() && password.toLowerCase() === userStorageInfo.password.toLowerCase()) {
+      login(username);
+      navigate("/");
     } else {
-      alert("Usuário ou senha inválidos!");
+      alert("Usuário ou senha inválidos!")
     }
   }
 
   const subscribe = (e) => {
     e.preventDefault();
-    console.log(usernameSubscribe)
-    console.log(nameSubscribe)
-    console.log(passwordSubscribe)
-    console.log(passwordSubscribeConfirmation)
+
+    let storage = getLocalStorage({key: "users"})
+    console.log(storage)
+
+    const usernames = storage.map(u => u.username)
+
+    if (passwordSubscribe === passwordSubscribeConfirmation) {
+      if (!usernames.find((username) => username.toLowerCase() === usernameSubscribe.toLowerCase())){
+        const user = {
+          id: crypto.randomUUID(),
+          username: usernameSubscribe,
+          name: nameSubscribe,
+          password: passwordSubscribe,
+          favorites: []
+        }
+        
+        let newUsers = [...storage, user]
+        saveLocalStorage({ key: "users", value: newUsers })
+        setUsernameSubscribe("")
+        setNameSubscribe("")
+        setPasswordSubscribe("")
+        setPasswordSubscribeConfirmation("")
+      } else {
+        alert("Este usuario já existe!")
+      }
+ 
+    }else {
+      alert("Senha e confimação de senha diferentes!")
+    }
+
   }
 
   return (

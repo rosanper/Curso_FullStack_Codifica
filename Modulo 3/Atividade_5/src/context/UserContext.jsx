@@ -8,10 +8,8 @@ export function UserProvider({children}){
     const [user,setUser] = useState('')
 
 
-    const login = (username, password) => {
-        if(username === 'admin' && password === '1234') {
-            setUser( username )
-        }
+    const login = (username) => {
+        setUser( username )
     }
 
     const logout = () => setUser(null)
