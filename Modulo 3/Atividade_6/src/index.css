@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variáveis para o tema light (padrão) */
+:root {
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --header-bg-color: #fff;
+  --header-text-color: #333;
+  --button-bg-color: #007bff;
+  --button-text-color: #fff;
+  padding: 0;
+  margin: 0;
+
+}
+
+/* Regras para o tema dark */
+body[data-theme="dark"] {
+  --background-color: #282c34;
+  --text-color: #fff;
+  --header-bg-color: #212121;
+  --header-text-color: #fff;
+  --button-bg-color: #61dafb;
+  --button-text-color: #282c34;
+}
+
+/* Estilos de elementos gerais */
+
+h1{
+  margin: 25px;
+  font-size: 48px;
+  text-align: center;
+}
+
+h2{
+  font-size: 30px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ====== GRID RESPONSIVO ====== */
+.produtos-grid {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* 1 col (mobile ≤ 480px) */
+@media (max-width: 480px) {
+  .produtos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 2 cols (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .produtos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 cols (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .produtos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 4 cols (≥ 1025px) */
+@media (min-width: 1025px) {
+  .produtos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
