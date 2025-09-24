@@ -20,7 +20,8 @@ O repositório está organizado por **módulos** conforme a estrutura curricular
 |--------|------------------------------------------------------------------|-----------------------------------------------|
 | 01     | Introdução à Ciência da Computação: Algoritmos e Estrutura de Dados | Exercícios de lógica, algoritmos e controle de fluxo utilizando JavaScript. |
 | 02     | Desenvolvimento Web: Front-End Essencial e Controle de Versão | Exercícios de Front-End utilizando HTML, CSS e JavaScript. |
-| 03     | Desenvolvimento Web com ReactJS. |
+| 03     | Desenvolvimento Web com ReactJS. | Exercícios aplicando a construção de páginas WEB com React 
+| 04     | Fundamentos de Programação em Java e Introdução ao Ecossistema Spring | Atividades de Java com aplicações de POO
 
 
 
@@ -30,6 +31,7 @@ O repositório está organizado por **módulos** conforme a estrutura curricular
 - HTML
 - CSS
 - React
+- Java
 
 
 ## 📝 Observações
