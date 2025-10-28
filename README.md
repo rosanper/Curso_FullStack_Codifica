@@ -22,6 +22,7 @@ O repositório está organizado por **módulos** conforme a estrutura curricular
 | 02     | Desenvolvimento Web: Front-End Essencial e Controle de Versão | Exercícios de Front-End utilizando HTML, CSS e JavaScript. |
 | 03     | Desenvolvimento Web com ReactJS. | Exercícios aplicando a construção de páginas WEB com React 
 | 04     | Fundamentos de Programação em Java e Introdução ao Ecossistema Spring | Atividades de Java com aplicações de POO
+| 05     | Desenvolvimento Backend com Spring Framework e Bancos de Dados Relacionais | Atividades de Banco de dados com aplicação de SQL
 
 
 
@@ -32,6 +33,8 @@ O repositório está organizado por **módulos** conforme a estrutura curricular
 - CSS
 - React
 - Java
+- PostgreSQL
+- SQL
 
 
 ## 📝 Observações
